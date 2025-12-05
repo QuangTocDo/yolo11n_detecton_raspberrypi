@@ -3,7 +3,7 @@
 # ============================
 
 # YOLO
-MODEL_PATH = "/home/rpi/project/yolo11n_2.pt"
+MODEL_PATH = "/home/rpi/project/best_weights/yolo11n_2.pt"
 CONF_THRESHOLD = 0.6
 FRAME_WIDTH = 640
 FRAME_HEIGHT = 480

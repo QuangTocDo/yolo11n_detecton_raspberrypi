@@ -1,4 +1,24 @@
+# --- File hệ thống/Rác Python ---
 __pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+# --- Môi trường ảo ---
 venv/
-.venv/
 env/
+.venv/
+
+# --- File dữ liệu & Model nặng (Chỉ giữ code) ---
+logs/
+
+# --- Các file weights (Model đã train) ---
+*.pt
+*.onnx
+*.tflite
+best_weights/
+
+# --- File ảnh/video test ---
+*.jpg
+*.png
+*.mp4

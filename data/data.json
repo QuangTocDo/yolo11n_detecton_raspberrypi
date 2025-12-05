@@ -1,0 +1,42 @@
+{
+  "Chateau Puybarbe": {
+    "name": "CHATEAU PUYBARBE GRAND VIN",
+    "origin": "Bordeaux, Pháp",
+    "abv": "14.5%",
+    "grape": "Merlot, Cabernet Sauvignon",
+    "taste": "Hương vị trái cây đen chín mọng, gỗ sồi, vani và gia vị.",
+    "pair": "Bò bít tết, sườn cừu nướng."
+  },
+  "Mongrana": {
+    "name": "MONGRANA MAREMMA TOSCANA",
+    "origin": "Tuscany, Ý",
+    "abv": "13.5%",
+    "grape": "Sangiovese, Cabernet, Merlot",
+    "taste": "Tươi mát, thuần khiết, hương trái cây đỏ (anh đào, mâm xôi).",
+    "pair": "Pizza, Mì Ý, Thịt heo."
+  },
+  "Primitivo Fuga": {
+    "name": "FUGA PRIMITIVO IGP PUGLIA",
+    "origin": "Puglia, Nam Ý",
+    "abv": "15.0%",
+    "grape": "100% Primitivo",
+    "taste": "Đậm đà, nồng nàn, hậu vị ngọt nhẹ của mứt mận và dâu tây.",
+    "pair": "Thịt nướng BBQ, Thịt kho tàu."
+  },
+  "Xavier Vignon": {
+    "name": "XAVIER VIGNON VENTOUX",
+    "origin": "Rhone Valley, Pháp",
+    "abv": "14.5%",
+    "grape": "Syrah, Grenache",
+    "taste": "Khoáng chất tươi mát, quả đen và tiêu đen cay nhẹ.",
+    "pair": "Thịt nguội, Phô mai, Gà nướng."
+  },
+  "Chardonnay": {
+    "name": "DOMAINE SAINT ANDRE CHARDONNAY",
+    "origin": "Languedoc, Pháp",
+    "abv": "13.0%",
+    "grape": "100% Chardonnay",
+    "taste": "Béo ngậy (Creamy), hương bơ tươi, bánh mì nướng và đào.",
+    "pair": "Hải sản sốt kem, Cá hồi."
+  }
+}

@@ -38,5 +38,37 @@
     "grape": "100% Chardonnay",
     "taste": "Béo ngậy (Creamy), hương bơ tươi, bánh mì nướng và đào.",
     "pair": "Hải sản sốt kem, Cá hồi."
+  },
+  "Banh ngot": {
+    "name": "BÁNH NGỌT",
+    "origin": "Homemade / Âu",
+    "abv": "Ngọt vừa",
+    "grape": "Socola, Phô mai, Trái cây tươi",
+    "taste": "Tuyển tập các loại bánh Âu (Tiramisu, Mousse, Cheesecake) với kết cấu mềm mịn, hương vị ngọt ngào tinh tế.",
+    "pair": "Rất hợp với Primitivo Fuga (bánh socola) hoặc Chardonnay (bánh kem béo)."
+  },
+  "fruits": {
+    "name": "TRÁI CÂY TƯƠI THEO MÙA",
+    "origin": "Việt Nam / Nhập khẩu",
+    "abv": "0%",
+    "grape": "Nho, Táo, Cam, Dưa lưới, Dâu tây",
+    "taste": "Tươi mát, mọng nước, vị ngọt thanh tự nhiên và giòn tan.",
+    "pair": "Dùng tráng miệng hoặc ăn kèm với Phô mai (Cheese Platter) và rượu vang trắng."
+  },
+  "nuoc suoi": {
+    "name": "NƯỚC KHOÁNG THIÊN NHIÊN",
+    "origin": "Việt Nam / Quốc tế",
+    "abv": "0%",
+    "grape": "Khoáng chất tự nhiên",
+    "taste": "Thanh khiết, mát lạnh, giúp làm sạch vị giác (Palate Cleanser).",
+    "pair": "Dùng xuyên suốt bữa tiệc để cân bằng vị giác giữa các loại rượu."
+  },
+  "nuoc ngot": {
+    "name": "NƯỚC NGỌT & SOFT DRINKS",
+    "origin": "Đa dạng thương hiệu",
+    "abv": "0%",
+    "grape": "Coca, Sprite, Soda chanh",
+    "taste": "Sảng khoái, ngọt ngào với bọt ga kích thích vị giác.",
+    "pair": "Giải khát tuyệt vời hoặc dùng kèm các món chiên rán, Pizza."
   }
 }

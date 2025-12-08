@@ -1,0 +1,114 @@
+2025-09-03 00:01:48,243 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-09-03 00:01:48,250 - INFO - server listening on 0.0.0.0:8765
+2025-09-03 00:01:48,250 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-09-03 00:02:13,618 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-09-03 00:02:13,623 - INFO - server listening on 0.0.0.0:8765
+2025-09-03 00:02:13,623 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-09-03 00:03:16,466 - INFO - connection open
+2025-09-03 00:03:16,467 - INFO - Go service connected from ('127.0.0.1', 56229)
+2025-09-03 00:05:06,890 - INFO - server closing
+2025-09-03 00:05:06,891 - INFO - server closed
+2025-09-03 00:05:06,892 - INFO - Shutdown signal received (Ctrl+C).
+2025-09-03 00:05:06,893 - INFO - Shutting down simulator...
+2025-09-03 00:05:06,894 - INFO - Simulator relay turned off. Goodbye!
+2025-09-03 00:05:12,799 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-09-03 00:05:12,803 - INFO - server listening on 0.0.0.0:8765
+2025-09-03 00:05:12,804 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-09-03 00:05:21,488 - INFO - connection open
+2025-09-03 00:05:21,489 - INFO - Go service connected from ('127.0.0.1', 52607)
+2025-09-03 00:06:19,814 - INFO - Go service ('127.0.0.1', 52607) disconnected.
+2025-09-03 00:06:27,951 - INFO - connection open
+2025-09-03 00:06:27,952 - INFO - Go service connected from ('127.0.0.1', 52648)
+2025-09-03 00:07:36,317 - INFO - Go service ('127.0.0.1', 52648) disconnected.
+2025-09-03 00:07:59,443 - INFO - connection open
+2025-09-03 00:07:59,444 - INFO - Go service connected from ('127.0.0.1', 64570)
+2025-09-03 00:08:07,657 - INFO - Go service ('127.0.0.1', 64570) disconnected.
+2025-09-03 00:08:23,809 - INFO - connection open
+2025-09-03 00:08:23,810 - INFO - Go service connected from ('127.0.0.1', 64583)
+2025-09-03 00:08:37,251 - INFO - Go service ('127.0.0.1', 64583) disconnected.
+2025-09-03 00:09:09,991 - INFO - server closing
+2025-09-03 00:09:09,991 - INFO - server closed
+2025-09-03 00:09:09,992 - INFO - Shutdown signal received (Ctrl+C).
+2025-09-03 00:09:09,993 - INFO - Shutting down simulator...
+2025-09-03 00:09:09,993 - INFO - Simulator relay turned off. Goodbye!
+2025-09-03 00:10:30,386 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-09-03 00:10:30,391 - INFO - server listening on 0.0.0.0:8765
+2025-09-03 00:10:30,391 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-09-03 00:10:38,378 - INFO - connection open
+2025-09-03 00:10:38,379 - INFO - Go service connected from ('127.0.0.1', 61631)
+2025-12-08 02:15:02,664 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 02:15:02,672 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 02:15:02,673 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 02:18:25,249 - INFO - server closing
+2025-12-08 02:18:25,249 - INFO - server closed
+2025-12-08 02:18:25,250 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 02:18:25,251 - INFO - Shutting down simulator...
+2025-12-08 02:18:25,251 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 02:23:20,289 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 02:23:20,297 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 02:23:20,297 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 02:30:53,636 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 02:30:53,644 - INFO - Shutting down simulator...
+2025-12-08 02:30:53,644 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 02:31:21,106 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 02:31:21,114 - INFO - Shutting down simulator...
+2025-12-08 02:31:21,114 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 02:31:46,762 - INFO - server closing
+2025-12-08 02:31:46,763 - INFO - server closed
+2025-12-08 02:31:46,766 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 02:31:46,767 - INFO - Shutting down simulator...
+2025-12-08 02:31:46,767 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 02:31:50,501 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 02:31:50,508 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 02:31:50,509 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 02:41:30,241 - INFO - server closing
+2025-12-08 02:41:30,242 - INFO - server closed
+2025-12-08 02:41:30,244 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 02:41:30,245 - INFO - Shutting down simulator...
+2025-12-08 02:41:30,246 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 07:37:37,950 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 07:37:37,962 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 07:37:37,963 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 08:35:53,558 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 08:35:53,570 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 08:35:53,571 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 08:38:03,331 - INFO - server closing
+2025-12-08 08:38:03,332 - INFO - server closed
+2025-12-08 08:38:03,334 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 08:38:03,335 - INFO - Shutting down simulator...
+2025-12-08 08:38:03,336 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 08:41:51,328 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 08:41:51,341 - INFO - server listening on 0.0.0.0:8080
+2025-12-08 08:41:51,341 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8080
+2025-12-08 08:43:09,206 - INFO - server closing
+2025-12-08 08:43:09,207 - INFO - server closed
+2025-12-08 08:43:09,208 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 08:43:09,209 - INFO - Shutting down simulator...
+2025-12-08 08:43:09,210 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 08:43:39,852 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 08:43:39,860 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 08:43:39,861 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 08:48:27,306 - INFO - server closing
+2025-12-08 08:48:27,306 - INFO - server closed
+2025-12-08 08:48:27,307 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 08:48:27,308 - INFO - Shutting down simulator...
+2025-12-08 08:48:27,308 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 09:05:45,760 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 09:05:45,769 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 09:05:45,769 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 09:05:53,952 - INFO - server closing
+2025-12-08 09:05:53,953 - INFO - server closed
+2025-12-08 09:05:53,954 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 09:05:53,955 - INFO - Shutting down simulator...
+2025-12-08 09:05:53,956 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 09:06:13,939 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 09:06:13,949 - INFO - Shutting down simulator...
+2025-12-08 09:06:13,949 - INFO - Simulator relay turned off. Goodbye!
+2025-12-08 09:07:14,438 - INFO - Starting FAKE hardware simulator. NO real hardware will be used.
+2025-12-08 09:07:14,446 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 09:07:14,446 - INFO - WebSocket server listening for Go Service on ws://0.0.0.0:8765
+2025-12-08 09:09:19,267 - INFO - server closing
+2025-12-08 09:09:19,268 - INFO - server closed
+2025-12-08 09:09:19,269 - INFO - Shutdown signal received (Ctrl+C).
+2025-12-08 09:09:19,271 - INFO - Shutting down simulator...
+2025-12-08 09:09:19,272 - INFO - Simulator relay turned off. Goodbye!

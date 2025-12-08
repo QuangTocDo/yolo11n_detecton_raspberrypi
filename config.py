@@ -3,7 +3,7 @@
 # ============================
 
 # YOLO
-MODEL_PATH = "/home/rpi/project/best_weights/yolo11n_2.pt"
+MODEL_PATH = "/home/rpi/project/best_weights/yolo11n_3.pt"
 CONF_THRESHOLD = 0.6
 FRAME_WIDTH = 640
 FRAME_HEIGHT = 480
@@ -33,4 +33,5 @@ CLASS_COLORS = {
     7: (255, 128, 0),
     8: (0, 128, 255),
     9: (128, 255, 0),
+   10: (255, 0, 128)
 }

@@ -1,0 +1,53 @@
+2025-12-08 02:04:11,632 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-08 02:04:11,663 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-08 02:04:11,663 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-08 02:04:11,663 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-08 02:04:11,664 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-08 02:04:11,664 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-08 02:04:11,671 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-08 02:04:11,676 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 02:04:11,677 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-08 02:05:47,796 - INFO - server closing
+2025-12-08 02:05:47,797 - INFO - server closed
+2025-12-08 02:05:47,798 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-08 02:05:47,799 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-08 02:05:47,799 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-08 02:05:47,802 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-08 02:05:47,802 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-08 02:07:21,289 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-08 02:07:21,319 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-08 02:07:21,319 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-08 02:07:21,320 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-08 02:07:21,320 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-08 02:07:21,320 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-08 02:07:21,323 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-08 02:07:21,328 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 02:07:21,329 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-08 02:07:44,420 - INFO - server closing
+2025-12-08 02:07:44,421 - INFO - server closed
+2025-12-08 02:07:44,422 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-08 02:07:44,422 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-08 02:07:44,423 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-08 02:07:44,426 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-08 02:07:44,426 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-08 09:18:59,566 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-08 09:18:59,601 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-08 09:18:59,602 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-08 09:18:59,602 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-08 09:18:59,602 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-08 09:18:59,602 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-08 09:18:59,608 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-08 09:18:59,613 - INFO - server listening on 0.0.0.0:8765
+2025-12-08 09:18:59,613 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-08 09:23:59,615 - INFO - ==================================================
+2025-12-08 09:23:59,615 - INFO - BÁO CÁO NĂNG LƯỢNG TIÊU THỤ (TỔNG CỘNG)
+2025-12-08 09:23:59,615 - INFO - ==> 0.00 Wh
+2025-12-08 09:23:59,616 - INFO - ==> 0.0000 kWh
+2025-12-08 09:23:59,616 - INFO - ==================================================
+2025-12-08 09:27:43,896 - INFO - server closing
+2025-12-08 09:27:43,897 - INFO - server closed
+2025-12-08 09:27:43,899 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-08 09:27:43,900 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-08 09:27:43,901 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-08 09:27:43,906 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-08 09:27:43,907 - INFO - Tất cả các relay đã được tắt. Tạm biệt!

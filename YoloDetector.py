@@ -6,7 +6,7 @@ from picamera2 import Picamera2
 
 from config import (
     MODEL_PATH, CONF_THRESHOLD, FRAME_WIDTH, FRAME_HEIGHT,
-    CLASS_COLORS, CAMERA_FORMAT, CAMERA_SLEEP
+    CLASS_COLORS, CAMERA_FORMAT, CAMERA_SLEEP, IGNORE_CLASSES
 )
 from timestep_logger import TimeStepLogger
 from show_activate import ShowActivate
@@ -75,6 +75,8 @@ class YOLOCameraDetector:
                     if score < CONF_THRESHOLD: continue
                     
                     cls = int(classes[i])
+                    if cls in IGNORE_CLASSES:
+                       continue
                     class_name = r.names[cls]
                     box = boxes[i]
                     x1, y1, x2, y2 = map(int, box)

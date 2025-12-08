@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Tủ Lạnh Thông Minh 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.11.1/dist/ethers.umd.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .data-card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .value-update {
+            animation: flash 0.7s ease;
+        }
+
+        @keyframes flash {
+            0% {
+                background-color: rgba(74, 222, 128, 0.3);
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                background-color: transparent;
+                transform: scale(1);
+            }
+        }
+
+        #error-notification {
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            transform: translateX(110%);
+            opacity: 0;
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+
+        #error-notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen">
+
+    <div id="error-notification"
+        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg shadow-lg max-w-sm">
+        <strong class="font-bold">Lỗi Hệ Thống!</strong>
+        <span class="block sm:inline" id="error-message">Nội dung lỗi sẽ hiện ở đây.</span>
+    </div>
+
+    <div class="w-full max-w-4xl p-4 md:p-8">
+        <div class="bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 md:p-8">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Bảng Điều Khiển Tủ Lạnh 1
+                    </h1>
+                    <p class="text-gray-500 dark:text-gray-400">Dữ liệu cảm biến thời gian thực từ Blockchain</p>
+                </div>
+                <div id="status-indicator" class="flex items-center space-x-2">
+                    <span id="status-text" class="text-sm font-medium text-yellow-500">Đang kết nối...</span>
+                    <div id="status-dot" class="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="data-card bg-blue-50 dark:bg-blue-900/50 p-6 rounded-xl flex items-start space-x-4">
+                    <div class="bg-blue-100 dark:bg-blue-800 p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16V6a1 1 0 00-1-1H9a1 1 0 00-1 1v10a5 5 0 106 0zM13 6a1 1 0 001-1V4a1 1 0 10-2 0v1a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-blue-600 dark:text-blue-300">Nhiệt độ</p>
+                        <p class="text-3xl font-bold text-gray-900 dark:text-white">
+                            <span id="temp-value">--</span><span class="text-xl"> °C</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="data-card bg-green-50 dark:bg-green-900/50 p-6 rounded-xl flex items-start space-x-4">
+                    <div class="bg-green-100 dark:bg-green-800 p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-green-600 dark:text-green-300">Độ ẩm</p>
+                        <p class="text-3xl font-bold text-gray-900 dark:text-white">
+                            <span id="humidity-value">--</span><span class="text-xl"> %</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="data-card bg-yellow-50 dark:bg-yellow-900/50 p-6 rounded-xl flex items-start space-x-4">
+                    <div class="bg-yellow-100 dark:bg-yellow-800 p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-yellow-600 dark:text-yellow-300">Công suất</p>
+                        <p class="text-3xl font-bold text-gray-900 dark:text-white">
+                            <span id="power-value">--</span><span class="text-xl"> W</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="data-card bg-purple-50 dark:bg-purple-900/50 p-6 rounded-xl flex items-start space-x-4">
+                    <div class="bg-purple-100 dark:bg-purple-800 p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 16v2m0-14v2m-4 6h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-purple-600 dark:text-purple-300">Tổng Năng Lượng</p>
+                        <p class="text-3xl font-bold text-gray-900 dark:text-white">
+                            <span id="energy-value">--</span><span class="text-xl"> kWh</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t dark:border-gray-700 pt-6">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Thiết lập thông số</h2>
+
+                <!-- Thanh trượt nhiệt độ -->
+                <div class="flex flex-col md:flex-row items-center md:items-end md:space-x-4 mb-6">
+                    <div class="flex-grow w-full">
+                        <label for="temp-slider"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Nhiệt độ mục tiêu:
+                            <span id="temp-display" class="font-semibold text-blue-600 dark:text-blue-300">--</span> °C
+                        </label>
+                        <input type="range" id="temp-slider" min="0" max="28" step="0.5" value="5"
+                            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                    </div>
+                    <button id="submit-temp-btn" type="button"
+                        class="mt-4 md:mt-0 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Thiết lập Nhiệt độ
+                    </button>
+                </div>
+
+                <!-- Thanh trượt độ ẩm -->
+                <div class="flex flex-col md:flex-row items-center md:items-end md:space-x-4 mb-4">
+                    <div class="flex-grow w-full">
+                        <label for="humidity-slider"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Độ ẩm mục tiêu:
+                            <span id="humidity-display"
+                                class="font-semibold text-green-600 dark:text-green-300">--</span> %
+                        </label>
+                        <input type="range" id="humidity-slider" min="20" max="100" step="1" value="70"
+                            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                    </div>
+                    <button id="submit-humidity-btn" type="button"
+                        class="mt-4 md:mt-0 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                        Thiết lập Độ ẩm
+                    </button>
+                </div>
+
+                <div id="response-message" class="mt-4 text-sm h-5"></div>
+            </div>
+            <div class="text-center mt-6 text-sm text-gray-400 dark:text-gray-500">
+                Cập nhật lần cuối: <span id="last-update">Chưa có dữ liệu</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ⚠️ KHÔNG BAO GIỜ để PRIVATE_KEY thật ở đây khi deploy lên mạng!
+        const RPC_URL = "wss://rpc-proxy-sequoia.iqnb.com:8446/";
+        const CONTRACT_ADDRESS = "0x7B92C5DF3A624dFC63f1715299Ed9561ae75Cb63";
+        const PRIVATE_KEY = "ef61f675212bf37dac8156f936b0113182cde328ba459dde10acf49c05b6c8bf"; // ⚠️ thay bằng biến môi trường khi test thật
+
+        const ABI = [
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "totalEnergyWhScaled",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "EnergyReported",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_totalEnergyWhScaled",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "reportEnergyUsage",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "_reason",
+                        "type": "string"
+                    }
+                ],
+                "name": "reportError",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "int256",
+                        "name": "newTemperature",
+                        "type": "int256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "newHumidity",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "power",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "SensorDataUpdated",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_newTargetHumidity",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "setTargetHumidity",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "int256",
+                        "name": "_newTargetTemperature",
+                        "type": "int256"
+                    }
+                ],
+                "name": "setTargetTemperature",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "SystemErrorOccurred",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "newTargetHumidity",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "TargetHumiditySet",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "int256",
+                        "name": "newTargetTemperature",
+                        "type": "int256"
+                    }
+                ],
+                "name": "TargetTemperatureSet",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "int256",
+                        "name": "_currentTemperature",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_currentHumidity",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_currentPower",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "updateSensorData",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "getHistoryCount",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "history",
+                "outputs": [
+                    {
+                        "internalType": "int256",
+                        "name": "temperature",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "humidity",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "power",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "lastSystemError",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "latestSensorHumidity",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "latestSensorPower",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "latestSensorTemperature",
+                "outputs": [
+                    {
+                        "internalType": "int256",
+                        "name": "",
+                        "type": "int256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "latestTotalEnergyWhScaled",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "targetHumidity",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "targetTemperature",
+                "outputs": [
+                    {
+                        "internalType": "int256",
+                        "name": "",
+                        "type": "int256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ];
+        const provider = new ethers.WebSocketProvider(RPC_URL);
+        const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
+        const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, wallet);
+        // ⚙️ Hàm gửi giao dịch không cần chờ xác nhận
+        async function sendTx(funcName, value) {
+            try {
+                let tx;
+                if (funcName === "setTargetTemperature") {
+                    tx = await contract.setTargetTemperature(parseInt(value * 100));
+                } else if (funcName === "setTargetHumidity") {
+                    tx = await contract.setTargetHumidity(parseInt(value * 100));
+                }
+
+                console.log(`🚀 Đã gửi ${funcName}(${value})`);
+                console.log("🔹 TX Hash:", tx.hash);
+            } catch (error) {
+                console.error(`❌ Lỗi khi gọi ${funcName}:`, error.message);
+            }
+        }
+
+
+        // --- Cập nhật hiển thị realtime ---
+        const tempSlider = document.getElementById("temp-slider");
+        const humiditySlider = document.getElementById("humidity-slider");
+        const tempDisplay = document.getElementById("temp-display");
+        const humidityDisplay = document.getElementById("humidity-display");
+        const responseMessage = document.getElementById("response-message");
+
+        // 🟢 Thêm dòng này để DOM mapping đúng:
+        const tempEl = document.getElementById("temp-value");
+        const humidityEl = document.getElementById("humidity-value");
+        const powerEl = document.getElementById("power-value");
+        const energyEl = document.getElementById("energy-value");
+        const lastUpdateEl = document.getElementById("last-update");
+
+        // Thông báo lỗi (đã có sẵn phần tử #error-notification và #error-message trong HTML)
+        const errorBox = document.getElementById("error-notification");
+        const errorMessage = document.getElementById("error-message");
+
+        tempDisplay.textContent = tempSlider.value;
+        humidityDisplay.textContent = humiditySlider.value;
+
+        tempSlider.addEventListener("input", () => {
+            tempDisplay.textContent = tempSlider.value;
+        });
+
+        humiditySlider.addEventListener("input", () => {
+            humidityDisplay.textContent = humiditySlider.value;
+        });
+
+        document.getElementById("submit-temp-btn").addEventListener("click", async () => {
+            const tempValue = parseFloat(tempSlider.value);
+            responseMessage.innerText = "⏳ Đang gửi TX thiết lập nhiệt độ...";
+            try {
+                await sendTx("setTargetTemperature", tempValue);
+                responseMessage.innerText = "✅ Đã gửi TX thiết lập nhiệt độ thành công!";
+            } catch (err) {
+                responseMessage.innerText = "❌ Gửi TX thất bại: " + err.message;
+            }
+        });
+
+        document.getElementById("submit-humidity-btn").addEventListener("click", async () => {
+            const humValue = parseFloat(humiditySlider.value);
+            responseMessage.innerText = "⏳ Đang gửi TX thiết lập độ ẩm...";
+            try {
+                await sendTx("setTargetHumidity", humValue);
+                responseMessage.innerText = "✅ Đã gửi TX thiết lập độ ẩm thành công!";
+            } catch (err) {
+                responseMessage.innerText = "❌ Gửi TX thất bại: " + err.message;
+            }
+        });
+        // ✅ Lắng nghe sự kiện SensorDataUpdated
+        contract.on("SensorDataUpdated", (newTemperature, newHumidity, power, timestamp) => {
+            const temp = Number(newTemperature) / 100; // giả sử scale *100
+            const hum = Number(newHumidity) / 100;
+            const pwr = Number(power) / 1000; // giả sử power tính mW → W
+            const time = new Date(Number(timestamp) * 1000).toLocaleString();
+
+            console.log("📡 SensorDataUpdated:", { temp, hum, pwr, time });
+
+            // Cập nhật giao diện
+            tempEl.textContent = temp.toFixed(2);
+            humidityEl.textContent = hum.toFixed(2);
+            powerEl.textContent = pwr.toFixed(2);
+            lastUpdateEl.textContent = time;
+        });
+
+        // ✅ Lắng nghe sự kiện EnergyReported
+        contract.on("EnergyReported", (totalEnergyWhScaled, timestamp) => {
+            const energyKWh = Number(totalEnergyWhScaled) / 1000; // giả sử scale Wh→kWh
+            const time = new Date(Number(timestamp) * 1000).toLocaleString();
+
+            console.log("⚡ EnergyReported:", { energyKWh, time });
+
+            energyEl.textContent = energyKWh.toFixed(3);
+            lastUpdateEl.textContent = time;
+        });
+
+        // ✅ Lắng nghe sự kiện SystemErrorOccurred
+        contract.on("SystemErrorOccurred", (reason, timestamp) => {
+            const time = new Date(Number(timestamp) * 1000).toLocaleString();
+            console.error("🚨 SystemErrorOccurred:", reason, "at", time);
+
+            errorBox.style.display = "block";
+            errorMessage.textContent = `${reason} (${time})`;
+
+            // Tự động ẩn thông báo sau 10 giây
+            setTimeout(() => {
+                errorBox.style.display = "none";
+            }, 10000);
+        });
+
+        // ✅ Kiểm tra kết nối định kỳ (keepAlive)
+        async function keepAlive() {
+            try {
+                const network = await provider.getNetwork();
+                console.log("🟢 Chain ID:", Number(network.chainId));
+                if (Number(network.chainId) === 991) {
+                    document.getElementById("status-text").textContent = "Đã kết nối Sequoia (Chain 991)";
+                    document.getElementById("status-text").className = "text-sm font-medium text-green-500";
+                    document.getElementById("status-dot").className = "w-3 h-3 bg-green-400 rounded-full";
+                } else throw new Error("Sai chain ID");
+            } catch (err) {
+                console.error("🔴 Lỗi kết nối:", err.message);
+                document.getElementById("status-text").textContent = "Mất kết nối...";
+                document.getElementById("status-text").className = "text-sm font-medium text-red-500";
+                document.getElementById("status-dot").className =
+                    "w-3 h-3 bg-red-400 rounded-full animate-pulse";
+            }
+        }
+
+        keepAlive();
+        setInterval(keepAlive, 30000);
+    </script>
+</body>
+
+</html>

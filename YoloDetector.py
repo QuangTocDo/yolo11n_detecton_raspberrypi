@@ -25,7 +25,7 @@ class YOLOCameraDetector:
         self.current_boxes_ui = [] 
         
         print("[INIT] Starting Camera...")
-        self.picam2 = Picamera2()
+        self.picam2 = Picamera2(camera_num = 1)
         cfg = self.picam2.create_still_configuration(
             main={"format": CAMERA_FORMAT, "size": (self.frame_width, self.frame_height)}
         )

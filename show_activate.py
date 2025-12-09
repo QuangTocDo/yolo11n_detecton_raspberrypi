@@ -13,12 +13,11 @@ class ShowActivate:
         self.json_path = os.path.join(self.data_dir, "data.json")
         
         self.is_visible = False 
-        self.current_key = None # [MỚI] Lưu tên sản phẩm đang được chọn để hiển thị
+        self.current_key = None 
         self.db = {} 
         
         self.font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
         if not os.path.exists(self.font_path):
-             # Fallback cho Windows nếu bạn test trên PC
             self.font_path = "arial.ttf" 
 
         os.makedirs(self.data_dir, exist_ok=True)
@@ -34,17 +33,15 @@ class ShowActivate:
         else:
             self.db = {}
 
-    # --- [MỚI] HÀM ĐỂ GỌI TỪ MAIN KHI CLICK CHUỘT ---
     def show_specific_item(self, class_name):
         """Hiển thị thông tin class này ngay lập tức"""
         self.current_key = class_name
-        self.is_visible = True # Tự động bật panel lên
+        self.is_visible = True 
 
     def close_panel(self):
         self.is_visible = False
         self.current_key = None
 
-    # ... (Giữ nguyên các hàm draw_text_pil, draw_wrapped_text_pil) ...
     def draw_text_pil(self, draw, text, pos, font_size, color):
         try:
             font = ImageFont.truetype(self.font_path, font_size)
@@ -100,7 +97,7 @@ class ShowActivate:
                 self.draw_text_pil(draw, "Không tìm thấy dữ liệu:", (30, 100), 20, (255, 100, 100))
                 self.draw_text_pil(draw, key_name, (30, 140), 30, (255, 255, 255))
             else:
-                # --- VẼ GIAO DIỆN NHƯ CŨ ---
+                # --- VẼ GIAO DIỆN ---
                 margin = 30
                 y = 40
                 w = FRAME_WIDTH - 50
@@ -110,18 +107,28 @@ class ShowActivate:
                 draw.line([(margin, y), (FRAME_WIDTH - 30, y)], fill=(100, 100, 100), width=2)
                 y += 20
 
-                # Chi tiết
+                # Chi tiết cơ bản (Origin, ABV)
                 sub = f"Xuất xứ: {info.get('origin','N/A')} | ABV: {info.get('abv','N/A')}"
                 y = self.draw_wrapped_text_pil(draw, sub, margin, y, w, 18, (0, 200, 255))
                 y += 10
+                
+                # Dòng Nho
                 y = self.draw_wrapped_text_pil(draw, f"Nho: {info.get('grape','N/A')}", margin, y, w, 18, (200, 200, 200))
+                y += 10
+
+                # --- [MỚI] Dòng Target Temp ---
+                # Lấy dữ liệu target_temp từ JSON, nếu không có thì hiện N/A
+                temp_val = info.get('target_temp', 'N/A')
+                y = self.draw_wrapped_text_pil(draw, f"Nhiệt độ dùng: {temp_val}", margin, y, w, 18, (255, 215, 0)) # Màu vàng Gold
                 y += 20
                 
+                # Hương vị
                 self.draw_text_pil(draw, "[ Hương vị ]", (margin, y), 20, (150, 150, 255))
                 y += 25
                 y = self.draw_wrapped_text_pil(draw, info.get('taste', ''), margin + 15, y, w, 16, (230, 230, 230))
                 y += 10
                 
+                # Kết hợp
                 self.draw_text_pil(draw, "[ Kết hợp ]", (margin, y), 20, (150, 150, 255))
                 y += 25
                 y = self.draw_wrapped_text_pil(draw, info.get('pair', ''), margin + 15, y, w, 16, (230, 230, 230))

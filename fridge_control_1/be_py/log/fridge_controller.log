@@ -51,3 +51,557 @@
 2025-12-08 09:27:43,901 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
 2025-12-08 09:27:43,906 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
 2025-12-08 09:27:43,907 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:10:33,426 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:10:33,460 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:10:33,461 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:10:33,461 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:10:33,461 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:10:33,461 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:10:33,467 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:10:33,476 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:10:33,476 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:11:16,531 - INFO - server closing
+2025-12-09 02:11:16,532 - INFO - server closed
+2025-12-09 02:11:16,534 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 02:11:16,535 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 02:11:16,535 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 02:11:16,541 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 02:11:16,541 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:20:49,175 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:20:49,205 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:20:49,205 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:20:49,205 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:20:49,206 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:20:49,206 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:20:49,209 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:20:49,214 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<control_loop_task() done, defined at /home/rpi/project/fridge_control_1/be_py/main.py:311> exception=UnboundLocalError("cannot access local variable 'last_ai_check_time' where it is not associated with a value")>
+Traceback (most recent call last):
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 318, in control_loop_task
+UnboundLocalError: cannot access local variable 'last_ai_check_time' where it is not associated with a value
+2025-12-09 02:20:49,216 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:20:49,216 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:21:51,927 - INFO - server closing
+2025-12-09 02:21:51,927 - INFO - server closed
+2025-12-09 02:21:51,929 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 02:21:51,931 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 02:21:51,932 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 02:21:51,937 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 02:21:51,938 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:24:28,273 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:24:28,303 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:24:28,303 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:24:28,304 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:24:28,304 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:24:28,304 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:24:28,307 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:24:28,312 - WARNING - Không tìm thấy cấu hình cho Key: 'Nuoc suoi' trong data.json
+2025-12-09 02:24:28,313 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:24:28,313 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:24:33,105 - INFO - server closing
+2025-12-09 02:24:33,106 - INFO - server closed
+2025-12-09 02:24:33,108 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 02:24:33,109 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 02:24:33,110 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 02:24:33,115 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 02:24:33,116 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:25:14,643 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:25:14,673 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:25:14,673 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:25:14,674 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:25:14,674 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:25:14,674 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:25:14,677 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:25:14,682 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 12°C
+2025-12-09 02:25:14,683 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:25:14,683 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:25:24,695 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:25:34,707 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:25:44,720 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:25:48,252 - INFO - server closing
+2025-12-09 02:25:48,253 - INFO - server closed
+2025-12-09 02:25:48,255 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 02:25:48,257 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 02:25:48,257 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 02:25:48,262 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 02:25:48,263 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:41:46,517 - INFO - Initialization successful.
+2025-12-09 02:41:46,518 - INFO - Camera now open.
+2025-12-09 02:41:46,535 - INFO - Camera configuration has been adjusted!
+2025-12-09 02:41:46,550 - INFO - Configuration successful!
+2025-12-09 02:41:46,722 - INFO - Camera started
+2025-12-09 02:43:08,430 - INFO - Camera stopped
+2025-12-09 02:43:08,833 - INFO - Camera closed successfully.
+2025-12-09 02:43:08,836 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:43:08,862 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:43:08,862 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:43:08,862 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:43:08,862 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:43:08,862 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:43:08,866 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:43:08,871 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 12°C
+2025-12-09 02:43:08,872 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:43:08,872 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:43:18,884 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:43:28,897 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:43:29,413 - INFO - server closing
+2025-12-09 02:43:29,414 - INFO - server closed
+2025-12-09 02:43:29,416 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 02:43:29,417 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 02:43:29,417 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 02:43:29,423 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 02:43:29,424 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:47:10,710 - INFO - Initialization successful.
+2025-12-09 02:47:10,711 - INFO - Camera now open.
+2025-12-09 02:47:10,728 - INFO - Camera configuration has been adjusted!
+2025-12-09 02:47:10,743 - INFO - Configuration successful!
+2025-12-09 02:47:10,914 - INFO - Camera started
+2025-12-09 02:47:11,915 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 02:47:11,916 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:47:11,942 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:47:11,943 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:47:11,943 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:47:11,943 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:47:11,943 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:47:11,948 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:47:11,953 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 12°C
+2025-12-09 02:47:11,954 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:47:11,954 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:47:21,967 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:47:31,979 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:47:41,991 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:47:46,680 - INFO - Camera stopped
+2025-12-09 02:47:47,084 - INFO - Camera closed successfully.
+2025-12-09 02:47:52,005 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 02:47:53,276 - INFO - server closing
+2025-12-09 02:47:53,277 - INFO - server closed
+2025-12-09 02:47:53,279 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 02:47:53,280 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 02:47:53,281 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 02:47:53,287 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 02:47:53,287 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 02:59:02,446 - INFO - Initialization successful.
+2025-12-09 02:59:02,447 - INFO - Camera now open.
+2025-12-09 02:59:02,465 - INFO - Camera configuration has been adjusted!
+2025-12-09 02:59:02,480 - INFO - Configuration successful!
+2025-12-09 02:59:02,658 - INFO - Camera started
+2025-12-09 02:59:03,660 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 02:59:03,662 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:59:03,694 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:59:03,695 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:59:03,696 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:59:03,697 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:59:03,697 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:59:03,702 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:59:03,708 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 12°C
+2025-12-09 02:59:03,709 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:59:03,710 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:59:40,857 - INFO - Initialization successful.
+2025-12-09 02:59:40,858 - INFO - Camera now open.
+2025-12-09 02:59:40,877 - INFO - Camera configuration has been adjusted!
+2025-12-09 02:59:40,894 - INFO - Configuration successful!
+2025-12-09 02:59:41,063 - INFO - Camera started
+2025-12-09 02:59:42,063 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 02:59:42,065 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 02:59:42,092 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 02:59:42,094 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 02:59:42,095 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 02:59:42,096 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 02:59:42,096 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 02:59:42,102 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 02:59:42,107 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 12°C
+2025-12-09 02:59:42,109 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 02:59:42,110 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 02:59:52,122 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 12.0°C -> 12°C
+2025-12-09 03:00:01,449 - INFO - server closing
+2025-12-09 03:00:01,449 - INFO - server closed
+2025-12-09 03:00:01,452 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:00:01,459 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:00:01,463 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:00:01,474 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:00:01,476 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:00:01,520 - INFO - Camera stopped
+2025-12-09 03:00:01,724 - INFO - Camera closed successfully.
+2025-12-09 03:09:40,172 - INFO - Initialization successful.
+2025-12-09 03:09:40,174 - INFO - Camera now open.
+2025-12-09 03:09:40,193 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:09:40,209 - INFO - Configuration successful!
+2025-12-09 03:09:40,379 - INFO - Camera started
+2025-12-09 03:09:41,380 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:09:41,382 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:09:41,409 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:09:41,410 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:09:41,410 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:09:41,411 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:09:41,411 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:09:41,415 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:09:41,422 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:09:41,423 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:10:01,447 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<control_loop_task() done, defined at /home/rpi/project/fridge_control_1/be_py/main.py:326> exception=NameError("name 'detected_name' is not defined")>
+Traceback (most recent call last):
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 336, in control_loop_task
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 277, in get_detected_class_name
+NameError: name 'detected_name' is not defined. Did you mean: 'detector_name'?
+2025-12-09 03:10:09,304 - INFO - server closing
+2025-12-09 03:10:09,305 - INFO - server closed
+2025-12-09 03:10:09,307 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:10:09,308 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:10:09,309 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:10:09,313 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:10:09,318 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:10:09,356 - INFO - Camera stopped
+2025-12-09 03:10:09,564 - INFO - Camera closed successfully.
+2025-12-09 03:11:56,265 - INFO - Initialization successful.
+2025-12-09 03:11:56,266 - INFO - Camera now open.
+2025-12-09 03:11:56,286 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:11:56,301 - INFO - Configuration successful!
+2025-12-09 03:11:56,475 - INFO - Camera started
+2025-12-09 03:11:57,476 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:11:57,479 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:11:57,507 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:11:57,507 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:11:57,507 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:11:57,508 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:11:57,509 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:11:57,513 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:11:57,523 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:11:57,524 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:12:17,544 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 03:12:17,546 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<control_loop_task() done, defined at /home/rpi/project/fridge_control_1/be_py/main.py:326> exception=NameError("name 'detected_nameì' is not defined")>
+Traceback (most recent call last):
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 336, in control_loop_task
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 278, in get_detected_class_name
+NameError: name 'detected_nameì' is not defined. Did you mean: 'detected_name'?
+2025-12-09 03:12:33,733 - INFO - server closing
+2025-12-09 03:12:33,741 - INFO - server closed
+2025-12-09 03:12:33,747 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:12:33,753 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:12:33,754 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:12:33,764 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:12:33,767 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:12:33,829 - INFO - Camera stopped
+2025-12-09 03:12:34,038 - INFO - Camera closed successfully.
+2025-12-09 03:14:12,462 - INFO - Initialization successful.
+2025-12-09 03:14:12,463 - INFO - Camera now open.
+2025-12-09 03:14:12,481 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:14:12,497 - INFO - Configuration successful!
+2025-12-09 03:14:12,672 - INFO - Camera started
+2025-12-09 03:14:13,672 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:14:13,678 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:14:13,710 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:14:13,710 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:14:13,711 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:14:13,711 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:14:13,711 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:14:13,716 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:14:13,723 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:14:13,725 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:14:33,746 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 03:14:33,748 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 12°C
+2025-12-09 03:15:18,375 - INFO - Camera stopped
+2025-12-09 03:15:18,779 - INFO - Camera closed successfully.
+2025-12-09 03:17:21,560 - INFO - server closing
+2025-12-09 03:17:21,561 - INFO - server closed
+2025-12-09 03:17:21,563 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:17:21,564 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:17:21,565 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:17:21,571 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:17:21,571 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:32:58,716 - INFO - Initialization successful.
+2025-12-09 03:32:58,717 - INFO - Camera now open.
+2025-12-09 03:32:58,734 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:32:58,749 - INFO - Configuration successful!
+2025-12-09 03:32:58,916 - INFO - Camera started
+2025-12-09 03:32:59,917 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:32:59,918 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:32:59,944 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:32:59,944 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:32:59,945 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:32:59,945 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:32:59,946 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:32:59,949 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:32:59,955 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:32:59,956 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:33:27,776 - INFO - Initialization successful.
+2025-12-09 03:33:27,777 - INFO - Camera now open.
+2025-12-09 03:33:27,794 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:33:27,809 - INFO - Configuration successful!
+2025-12-09 03:33:27,982 - INFO - Camera started
+2025-12-09 03:33:28,983 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:33:28,984 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:33:29,010 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:33:29,010 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:33:29,011 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:33:29,011 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:33:29,011 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:33:29,015 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:33:29,021 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:33:29,022 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:33:59,052 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 03:33:59,052 - ERROR - Lỗi định dạng file /home/rpi/project/data/data.json
+2025-12-09 03:33:59,053 - WARNING - Không tìm thấy cấu hình cho Key: 'nuoc suoi' trong data.json
+2025-12-09 03:34:11,201 - INFO - server closing
+2025-12-09 03:34:11,202 - INFO - server closed
+2025-12-09 03:34:11,203 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:34:11,205 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:34:11,205 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:34:11,209 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:34:11,210 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:34:11,266 - INFO - Camera stopped
+2025-12-09 03:34:11,470 - INFO - Camera closed successfully.
+2025-12-09 03:36:09,053 - INFO - Initialization successful.
+2025-12-09 03:36:09,054 - INFO - Camera now open.
+2025-12-09 03:36:09,071 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:36:09,086 - INFO - Configuration successful!
+2025-12-09 03:36:09,257 - INFO - Camera started
+2025-12-09 03:36:10,258 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:36:10,259 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:36:10,285 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:36:10,285 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:36:10,286 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:36:10,286 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:36:10,287 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:36:10,291 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:36:10,297 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:36:10,297 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:36:20,310 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 03:36:20,311 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 03:37:40,402 - INFO - [BRIDGE] Da lay du lieu tu camera: Primitivo Fuga
+2025-12-09 03:37:40,404 - INFO - ==> PHÁT HIỆN 'Primitivo Fuga'. Đổi nhiệt độ từ 6.0°C -> 19°C
+2025-12-09 03:38:00,430 - INFO - [BRIDGE] Da lay du lieu tu camera: Mongrana
+2025-12-09 03:38:00,432 - WARNING - Sản phẩm 'Mongrana' có trong data nhưng thiếu trường 'target_temp'
+2025-12-09 03:38:51,253 - INFO - server closing
+2025-12-09 03:38:51,254 - INFO - server closed
+2025-12-09 03:38:51,256 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:38:51,258 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:38:51,259 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:38:51,263 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:38:51,264 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:38:51,321 - INFO - Camera stopped
+2025-12-09 03:38:51,524 - INFO - Camera closed successfully.
+2025-12-09 03:41:36,588 - INFO - Initialization successful.
+2025-12-09 03:41:36,589 - INFO - Camera now open.
+2025-12-09 03:41:36,606 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:41:36,621 - INFO - Configuration successful!
+2025-12-09 03:41:36,794 - INFO - Camera started
+2025-12-09 03:41:37,795 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:41:37,796 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:41:37,822 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:41:37,822 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:41:37,823 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:41:37,823 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:41:37,824 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:41:37,828 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:41:37,833 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:41:37,834 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:43:27,962 - INFO - [BRIDGE] Da lay du lieu tu camera: Mongrana
+2025-12-09 03:43:27,963 - INFO - ==> PHÁT HIỆN 'Mongrana'. Đổi nhiệt độ từ 24.0°C -> 16°C
+2025-12-09 03:45:08,083 - INFO - [BRIDGE] Da lay du lieu tu camera: Chardonnay
+2025-12-09 03:45:08,087 - INFO - ==> PHÁT HIỆN 'Chardonnay'. Đổi nhiệt độ từ 16.0°C -> 8°C
+2025-12-09 03:45:48,134 - INFO - [BRIDGE] Da lay du lieu tu camera: Chateau Puybarbe
+2025-12-09 03:45:48,135 - INFO - ==> PHÁT HIỆN 'Chateau Puybarbe'. Đổi nhiệt độ từ 8.0°C -> 17°C
+2025-12-09 03:46:18,175 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 03:46:18,175 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 17.0°C -> 6°C
+2025-12-09 03:46:37,836 - INFO - ==================================================
+2025-12-09 03:46:37,836 - INFO - BÁO CÁO NĂNG LƯỢNG TIÊU THỤ (TỔNG CỘNG)
+2025-12-09 03:46:37,836 - INFO - ==> 0.00 Wh
+2025-12-09 03:46:37,836 - INFO - ==> 0.0000 kWh
+2025-12-09 03:46:37,836 - INFO - ==================================================
+2025-12-09 03:46:50,936 - INFO - Camera stopped
+2025-12-09 03:46:51,340 - INFO - Camera closed successfully.
+2025-12-09 03:47:10,287 - INFO - server closing
+2025-12-09 03:47:10,288 - INFO - server closed
+2025-12-09 03:47:10,292 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:47:10,294 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:47:10,294 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:47:10,301 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:47:10,301 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:51:36,500 - INFO - Initialization successful.
+2025-12-09 03:51:36,501 - INFO - Camera now open.
+2025-12-09 03:51:36,518 - INFO - Camera configuration has been adjusted!
+2025-12-09 03:51:36,533 - INFO - Configuration successful!
+2025-12-09 03:51:36,706 - INFO - Camera started
+2025-12-09 03:51:37,707 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 03:51:37,708 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 03:51:37,734 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 03:51:37,734 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 03:51:37,734 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 03:51:37,735 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 03:51:37,735 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 03:51:37,739 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 03:51:37,745 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 03:51:37,746 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 03:51:57,772 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 03:51:57,772 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 03:54:39,283 - INFO - server closing
+2025-12-09 03:54:39,283 - INFO - server closed
+2025-12-09 03:54:39,285 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 03:54:39,286 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 03:54:39,286 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 03:54:39,290 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 03:54:39,291 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 03:54:39,334 - INFO - Camera stopped
+2025-12-09 03:54:39,537 - INFO - Camera closed successfully.
+2025-12-09 04:42:52,105 - INFO - Initialization successful.
+2025-12-09 04:42:52,106 - INFO - Camera now open.
+2025-12-09 04:42:52,122 - INFO - Camera configuration has been adjusted!
+2025-12-09 04:42:52,137 - INFO - Configuration successful!
+2025-12-09 04:42:52,306 - INFO - Camera started
+2025-12-09 04:42:53,307 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 04:42:53,308 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 04:42:53,334 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 04:42:53,334 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 04:42:53,335 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 04:42:53,335 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 04:42:53,335 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 04:42:53,339 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 04:42:53,345 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 04:42:53,345 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 04:43:31,169 - INFO - Initialization successful.
+2025-12-09 04:43:31,170 - INFO - Camera now open.
+2025-12-09 04:43:31,186 - INFO - Camera configuration has been adjusted!
+2025-12-09 04:43:31,201 - INFO - Configuration successful!
+2025-12-09 04:43:31,374 - INFO - Camera started
+2025-12-09 04:43:32,375 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 04:43:32,376 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 04:43:32,402 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 04:43:32,402 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 04:43:32,403 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 04:43:32,403 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 04:43:32,404 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 04:43:32,408 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 04:43:32,414 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 04:43:32,414 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 04:43:42,424 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 04:43:42,425 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 04:45:22,552 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:45:22,553 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<control_loop_task() done, defined at /home/rpi/project/fridge_control_1/be_py/main.py:337> exception=NameError("name 'current_target_time' is not defined")>
+Traceback (most recent call last):
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 351, in control_loop_task
+  File "/home/rpi/project/fridge_control_1/be_py/main.py", line 291, in get_delected_class_name
+NameError: name 'current_target_time' is not defined. Did you mean: 'current_target_temp'?
+2025-12-09 04:45:33,836 - INFO - server closing
+2025-12-09 04:45:33,839 - INFO - server closed
+2025-12-09 04:45:33,844 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 04:45:33,845 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 04:45:33,846 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 04:45:33,849 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 04:45:33,850 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 04:45:33,894 - INFO - Camera stopped
+2025-12-09 04:45:34,100 - INFO - Camera closed successfully.
+2025-12-09 04:46:25,661 - INFO - Initialization successful.
+2025-12-09 04:46:25,662 - INFO - Camera now open.
+2025-12-09 04:46:25,678 - INFO - Camera configuration has been adjusted!
+2025-12-09 04:46:25,693 - INFO - Configuration successful!
+2025-12-09 04:46:25,867 - INFO - Camera started
+2025-12-09 04:46:26,867 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 04:46:26,869 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 04:46:26,895 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 04:46:26,895 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 04:46:26,896 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 04:46:26,896 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 04:46:26,897 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 04:46:26,900 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 04:46:26,906 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 04:46:26,907 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 04:46:36,917 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 04:46:36,918 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 04:48:27,051 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:48:37,064 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:48:47,074 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:48:57,086 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:49:07,098 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 04:49:07,099 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 04:49:07,100 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:49:17,111 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:49:21,310 - INFO - Camera stopped
+2025-12-09 04:49:21,714 - INFO - Camera closed successfully.
+2025-12-09 04:49:24,744 - INFO - server closing
+2025-12-09 04:49:24,745 - INFO - server closed
+2025-12-09 04:49:24,746 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 04:49:24,746 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 04:49:24,747 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 04:49:24,750 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 04:49:24,750 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 04:51:07,987 - INFO - Initialization successful.
+2025-12-09 04:51:07,988 - INFO - Camera now open.
+2025-12-09 04:51:08,004 - INFO - Camera configuration has been adjusted!
+2025-12-09 04:51:08,019 - INFO - Configuration successful!
+2025-12-09 04:51:08,186 - INFO - Camera started
+2025-12-09 04:51:09,187 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 04:51:09,188 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 04:51:09,214 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 04:51:09,214 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 04:51:09,215 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 04:51:09,215 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 04:51:09,216 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 04:51:09,220 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 04:51:09,226 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 04:51:09,226 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 04:51:19,236 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 04:51:19,238 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 04:52:49,054 - INFO - server closing
+2025-12-09 04:52:49,055 - INFO - server closed
+2025-12-09 04:52:49,057 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 04:52:49,059 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 04:52:49,059 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 04:52:49,063 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 04:52:49,064 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 04:52:49,121 - INFO - Camera stopped
+2025-12-09 04:52:49,325 - INFO - Camera closed successfully.
+2025-12-09 04:53:47,748 - INFO - Initialization successful.
+2025-12-09 04:53:47,749 - INFO - Camera now open.
+2025-12-09 04:53:47,766 - INFO - Camera configuration has been adjusted!
+2025-12-09 04:53:47,780 - INFO - Configuration successful!
+2025-12-09 04:53:47,948 - INFO - Camera started
+2025-12-09 04:53:48,949 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 04:53:48,951 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 04:53:48,976 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 04:53:48,976 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 04:53:48,977 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 04:53:48,977 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 04:53:48,977 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 04:53:48,981 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 04:53:48,987 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 04:53:48,987 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 04:53:58,998 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 04:53:59,000 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 04:55:06,188 - INFO - Camera stopped
+2025-12-09 04:55:06,592 - INFO - Camera closed successfully.
+2025-12-09 04:55:08,047 - INFO - server closing
+2025-12-09 04:55:08,048 - INFO - server closed
+2025-12-09 04:55:08,049 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 04:55:08,050 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 04:55:08,050 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 04:55:08,053 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 04:55:08,054 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 04:56:02,312 - INFO - Initialization successful.
+2025-12-09 04:56:02,313 - INFO - Camera now open.
+2025-12-09 04:56:02,330 - INFO - Camera configuration has been adjusted!
+2025-12-09 04:56:02,345 - INFO - Configuration successful!
+2025-12-09 04:56:02,512 - INFO - Camera started
+2025-12-09 04:56:03,516 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 04:56:03,518 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 04:56:03,544 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 04:56:03,545 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 04:56:03,546 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 04:56:03,546 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 04:56:03,547 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 04:56:03,551 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 04:56:03,560 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 04:56:03,561 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 04:56:13,571 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 04:56:13,573 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 04:58:13,720 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 04:58:29,926 - INFO - server closing
+2025-12-09 04:58:29,927 - INFO - server closed
+2025-12-09 04:58:29,928 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 04:58:29,929 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 04:58:29,929 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 04:58:29,933 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 04:58:29,934 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 04:58:29,974 - INFO - Camera stopped
+2025-12-09 04:58:30,178 - INFO - Camera closed successfully.

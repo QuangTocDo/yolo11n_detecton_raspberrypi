@@ -46,7 +46,7 @@ class TimeStepLogger:
         now = time.time()
         # Tạo list copy các ID đang theo dõi để tránh lỗi khi xóa dictionary trong lúc loop
         current_ids = list(self.last_seen_time.keys())
-
+        delected_item_name = None
         for class_id in current_ids:
             # Nếu thời gian mất dấu vượt quá giới hạn reset
             if (now - self.last_seen_time[class_id]) > self.reset_after_seconds:
@@ -64,6 +64,8 @@ class TimeStepLogger:
                 # 2. Xóa sạch dữ liệu trong bộ nhớ (Reset hoàn toàn)
                 # Để lần sau xuất hiện sẽ tính là object mới tinh
                 self._remove_id_from_memory(class_id)
+                delected_item_name  = class_name
+        return delected_item_name
     
     def _remove_id_from_memory(self, class_id):
         """Hàm phụ trợ để xóa sạch data của 1 ID"""
@@ -108,7 +110,7 @@ class TimeStepLogger:
             with open(self._get_csv_file(class_name), "a", newline="") as f:
                 csv.writer(f).writerow([timestamp, class_name, conf, "Tracking Started"])
             print(f"[LOG] {class_name} tracking started.")
-
+            return class_name
     # ... (Các hàm get_duration, check_and_log_activation giữ nguyên) ...
     def check_and_log_activation(self, class_id, class_name):
         if not self.logged_initial.get(class_id, False): return False

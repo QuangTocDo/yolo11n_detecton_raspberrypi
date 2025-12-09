@@ -1,4 +1,12 @@
+# -*- coding: utf-8 -*-
 import os
+import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, '../../'))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from YoloDetector import YOLOCameraDetector 
+from threading import Thread
 import asyncio
 import busio
 import websockets
@@ -14,7 +22,6 @@ from websockets.exceptions import ConnectionClosed
 from websockets.server import WebSocketServerProtocol
 import adafruit_ads1x15.ads1115 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
-
 # --- CẤU HÌNH LOG ---
 LOG_DIR = 'log'
 LOG_FILE = 'fridge_controller.log'
@@ -85,9 +92,14 @@ power_sensor_channel: Optional[AnalogIn] = None # Kênh analog của cảm biế
 last_measured_power_w: float = 0.0 # Công suất đo được gần nhất (Watts
 
 # Trạng thái logic điều khiển
-current_target_temp: Optional[float] = 24.0
+current_temp = 24.0
+current_target_temp: Optional[float] = current_temp
 current_target_humidity: Optional[float] = 75.0
 system_mode = 'IDLE'
+
+# Cau hinh YOLO detection
+#last_ai_check_time = 0
+#AI_CHECK_INTERVAL = 10.0 # Kiểm tra camera mỗi 10 giây
 
 def get_rms_current(chan: AnalogIn, samples=200):
     """Đo và tính toán dòng điện hiệu dụng (RMS)."""
@@ -251,13 +263,95 @@ async def send_error_report_async(reason: str):
     )
 
 # --- VÒNG LẶP ĐIỀU KHIỂN CHÍNH ---
-# Hãy chép và thay thế toàn bộ hàm này
+# Hãy chép và thay thế toàn bộ hàm n�
+
+# Giả lập hàm của bạn (bạn thay thế bằng hàm thực tế của bạn ở đây)
+def get_detected_class_name():
+    # Ví dụ: Hàm này trả về tên class mà camera/AI nhận diện được
+    # Return None nếu không phát hiệng
+    global detector
+    if detector is None:
+       return None
+    if detector.latest_detection is not None:
+       detected_name = detector.latest_detection
+       detector.latest_detection = None
+       logging.info(f"[BRIDGE] Da lay du lieu tu camera: {detected_name}")
+       return detected_name
+    return None 
+def get_delected_class_name():
+    global detector
+    global current_target_temp
+    global current_temp
+    if detector is None:
+       return None
+    if detector.delected_item is not None:
+      delected_name = detector.delected_item
+      current_target_temp = current_temp
+      detector.delected_item = None
+      logging.info(f"[BRIDGE] Da cap nhat lai nhiet do khi khong con san pham {delected_name}")
+      return current_target_temp
+def load_product_data(filepath="/home/rpi/project/data/data.json"):
+    """Đọc dữ liệu từ file JSON"""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        logging.error(f"Không tìm thấy file {filepath}")
+        return []
+    except json.JSONDecodeError:
+        logging.error(f"Lỗi định dạng file {filepath}")
+        return []
+
+def update_temp_from_class_name(class_name):
+    """
+    Tra cứu trực tiếp bằng Key (tên object) trong data.json
+    """
+    global current_target_temp
+    
+    # 1. Load dữ liệu
+    products = load_product_data() # Hàm này trả về 1 Dictionary
+    
+    # 2. Tra cứu trực tiếp (Không cần vòng lặp for)
+    # class_name chính là Key (ví dụ: "Chateau Puybarbe")
+    if class_name in products:
+        product_info = products[class_name]
+        
+        # Lấy nhiệt độ từ trong object đó
+        new_temp = product_info.get('target_temp')
+        
+        if new_temp is not None:
+            if current_target_temp != new_temp:
+                logging.info(f"==> PHÁT HIỆN '{class_name}'. Đổi nhiệt độ từ {current_target_temp}°C -> {new_temp}°C")
+                current_target_temp = float(new_temp)
+                
+                # [Option] Bạn có thể lấy thêm thông tin để hiển thị LCD/Web nếu muốn
+                # print(f"Thông tin sản phẩm: {product_info['name']} - {product_info['origin']}")
+                return True
+            else:
+                return False # Nhiệt độ đã đúng rồi
+        else:
+             logging.warning(f"Sản phẩm '{class_name}' có trong data nhưng thiếu trường 'target_temp'")
+             return False
+    else:
+        logging.warning(f"Không tìm thấy cấu hình cho Key: '{class_name}' trong data.json")
+        return False
 async def control_loop_task():
     # THAY ĐỔI: Bỏ biến `power_fault_reported` khỏi danh sách global
     global system_mode, last_measured_power_w, total_energy_wh
     global power_fault_check_start_time
-
+    global current_target_temp
+    last_ai_check_time = 0
+    AI_CHECK_INTERVAL = 10.0
     while True:
+        current_time = time.monotonic()
+        if current_time - last_ai_check_time > AI_CHECK_INTERVAL:
+           detected_name = get_detected_class_name()
+           if detected_name:
+              update_temp_from_class_name(detected_name)
+           last_ai_check_time = current_time
+           delected_name = get_delected_class_name()
+           if delected_name:
+             current_target_temp = delected_name
         await asyncio.sleep(READ_INTERVAL)
 
         if current_target_temp is None or sensor is None:
@@ -457,6 +551,20 @@ async def cleanup():
     logging.info("Tất cả các relay đã được tắt. Tạm biệt!")
 
 if __name__ == "__main__":
+    # 1. Khởi tạo đối tượng Detector
+    # Lưu ý: Đảm bảo bạn đã import đúng như hướng dẫn trước
+    detector = YOLOCameraDetector()
+
+    # 2. Tạo một Luồng (Thread) riêng để chạy Camera AI
+    # target=detector.run: Chỉ định hàm cần chạy
+    # daemon=True: Quan trọng! Giúp luồng này tự tắt khi chương trình chính tắt
+    ai_thread = Thread(target=detector.run, args=(), daemon=True)
+    
+    # 3. Bắt đầu chạy luồng AI (Nó sẽ chạy song song ngay lập tức)
+    logging.info("Đang khởi động luồng AI Camera...")
+    ai_thread.start()
+
+    # 4. Chạy vòng lặp điều khiển chính (Asyncio) ở luồng chính
     try:
         asyncio.run(main())
     except KeyboardInterrupt:

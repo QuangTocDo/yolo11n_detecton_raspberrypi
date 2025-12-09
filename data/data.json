@@ -5,7 +5,8 @@
     "abv": "14.5%",
     "grape": "Merlot, Cabernet Sauvignon",
     "taste": "Hương vị trái cây đen chín mọng, gỗ sồi, vani và gia vị.",
-    "pair": "Bò bít tết, sườn cừu nướng."
+    "pair": "Bò bít tết, sườn cừu nướng.",
+    "target_temp": "17"
   },
   "Mongrana": {
     "name": "MONGRANA MAREMMA TOSCANA",
@@ -13,7 +14,8 @@
     "abv": "13.5%",
     "grape": "Sangiovese, Cabernet, Merlot",
     "taste": "Tươi mát, thuần khiết, hương trái cây đỏ (anh đào, mâm xôi).",
-    "pair": "Pizza, Mì Ý, Thịt heo."
+    "pair": "Pizza, Mì Ý, Thịt heo.",
+    "target_temp": "16"
   },
   "Primitivo Fuga": {
     "name": "FUGA PRIMITIVO IGP PUGLIA",
@@ -21,7 +23,8 @@
     "abv": "15.0%",
     "grape": "100% Primitivo",
     "taste": "Đậm đà, nồng nàn, hậu vị ngọt nhẹ của mứt mận và dâu tây.",
-    "pair": "Thịt nướng BBQ, Thịt kho tàu."
+    "pair": "Thịt nướng BBQ, Thịt kho tàu.",
+    "target_temp": "19"
   },
   "Xavier Vignon": {
     "name": "XAVIER VIGNON VENTOUX",
@@ -29,7 +32,8 @@
     "abv": "14.5%",
     "grape": "Syrah, Grenache",
     "taste": "Khoáng chất tươi mát, quả đen và tiêu đen cay nhẹ.",
-    "pair": "Thịt nguội, Phô mai, Gà nướng."
+    "pair": "Thịt nguội, Phô mai, Gà nướng.",
+    "target_temp": "15"
   },
   "Chardonnay": {
     "name": "DOMAINE SAINT ANDRE CHARDONNAY",
@@ -37,7 +41,8 @@
     "abv": "13.0%",
     "grape": "100% Chardonnay",
     "taste": "Béo ngậy (Creamy), hương bơ tươi, bánh mì nướng và đào.",
-    "pair": "Hải sản sốt kem, Cá hồi."
+    "pair": "Hải sản sốt kem, Cá hồi.",
+    "target_temp": "8"
   },
   "Banh ngot": {
     "name": "BÁNH NGỌT",
@@ -45,7 +50,8 @@
     "abv": "Ngọt vừa",
     "grape": "Socola, Phô mai, Trái cây tươi",
     "taste": "Tuyển tập các loại bánh Âu (Tiramisu, Mousse, Cheesecake) với kết cấu mềm mịn, hương vị ngọt ngào tinh tế.",
-    "pair": "Rất hợp với Primitivo Fuga (bánh socola) hoặc Chardonnay (bánh kem béo)."
+    "pair": "Rất hợp với Primitivo Fuga (bánh socola) hoặc Chardonnay (bánh kem béo).",
+    "target_temp": "2"
   },
   "fruits": {
     "name": "TRÁI CÂY TƯƠI THEO MÙA",
@@ -53,7 +59,8 @@
     "abv": "0%",
     "grape": "Nho, Táo, Cam, Dưa lưới, Dâu tây",
     "taste": "Tươi mát, mọng nước, vị ngọt thanh tự nhiên và giòn tan.",
-    "pair": "Dùng tráng miệng hoặc ăn kèm với Phô mai (Cheese Platter) và rượu vang trắng."
+    "pair": "Dùng tráng miệng hoặc ăn kèm với Phô mai (Cheese Platter) và rượu vang trắng.",
+    "target_temp": "9"
   },
   "nuoc suoi": {
     "name": "NƯỚC KHOÁNG THIÊN NHIÊN",
@@ -62,7 +69,7 @@
     "grape": "Khoáng chất tự nhiên",
     "taste": "Thanh khiết, mát lạnh, giúp làm sạch vị giác (Palate Cleanser).",
     "pair": "Dùng xuyên suốt bữa tiệc để cân bằng vị giác giữa các loại rượu.",
-    "temperature": "12"
+    "target_temp": "6"
   },
   "nuoc ngot": {
     "name": "NƯỚC NGỌT & SOFT DRINKS",
@@ -70,6 +77,7 @@
     "abv": "0%",
     "grape": "Coca, Sprite, Soda chanh",
     "taste": "Sảng khoái, ngọt ngào với bọt ga kích thích vị giác.",
-    "pair": "Giải khát tuyệt vời hoặc dùng kèm các món chiên rán, Pizza."
+    "pair": "Giải khát tuyệt vời hoặc dùng kèm các món chiên rán, Pizza.",
+    "target_temp": "5"
   }
 }

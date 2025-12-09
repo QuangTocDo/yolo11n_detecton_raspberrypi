@@ -23,7 +23,8 @@ class YOLOCameraDetector:
         
         # List to store current boxes for mouse interaction
         self.current_boxes_ui = [] 
-        
+        self.latest_detection = None
+        self.delected_item = None
         print("[INIT] Starting Camera...")
         self.picam2 = Picamera2(camera_num = 1)
         cfg = self.picam2.create_still_configuration(
@@ -82,8 +83,10 @@ class YOLOCameraDetector:
                     x1, y1, x2, y2 = map(int, box)
 
                     # 1. Update Logger Tracking
-                    self.logger.log_first_detect(cls, class_name, score)
-                    
+                    result_class_name = self.logger.log_first_detect(cls, class_name, score)
+                    if result_class_name is not None:
+                       self.latest_detection = result_class_name
+#                       print("Da lu bien '{result_class_name}' vao bien chung")
                     # --- [FIXED] THIS LINE WAS MISSING ---
                     # Check if time exceeded threshold to trigger activation
                     self.logger.check_and_log_activation(cls, class_name)
@@ -120,8 +123,9 @@ class YOLOCameraDetector:
 
                 self.current_boxes_ui = frame_boxes_temp
                 
-                self.logger.check_active_timeouts()
-
+                result_delected_item = self.logger.check_active_timeouts()
+                if result_delected_item is not None:
+                   self.delected_item = result_delected_item 
                 if self.viewer.is_visible:
                     panel = self.viewer.get_image()
                     if panel.shape[0] != annotated_frame.shape[0]:

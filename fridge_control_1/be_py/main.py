@@ -348,10 +348,11 @@ async def control_loop_task():
            detected_name = get_detected_class_name()
            if detected_name:
               update_temp_from_class_name(detected_name)
+#           last_ai_check_time = current_time
+#           delected_name = get_delected_class_name()
+#           if delected_name:
+#             current_target_temp = delected_name
            last_ai_check_time = current_time
-           delected_name = get_delected_class_name()
-           if delected_name:
-             current_target_temp = delected_name
         await asyncio.sleep(READ_INTERVAL)
 
         if current_target_temp is None or sensor is None:

@@ -605,3 +605,73 @@ NameError: name 'current_target_time' is not defined. Did you mean: 'current_tar
 2025-12-09 04:58:29,934 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
 2025-12-09 04:58:29,974 - INFO - Camera stopped
 2025-12-09 04:58:30,178 - INFO - Camera closed successfully.
+2025-12-09 06:13:52,604 - INFO - Initialization successful.
+2025-12-09 06:13:52,605 - INFO - Camera now open.
+2025-12-09 06:13:52,622 - INFO - Camera configuration has been adjusted!
+2025-12-09 06:13:52,636 - INFO - Configuration successful!
+2025-12-09 06:13:52,810 - INFO - Camera started
+2025-12-09 06:13:53,810 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 06:13:53,812 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 06:13:53,838 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 06:13:53,838 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 06:13:53,839 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 06:13:53,840 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 06:13:53,840 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 06:13:53,844 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 06:13:53,850 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 06:13:53,850 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 06:14:13,871 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 06:14:13,873 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 06:15:43,980 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 06:16:14,017 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 06:16:14,017 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 06:17:04,070 - INFO - [BRIDGE] Da lay du lieu tu camera: Mongrana
+2025-12-09 06:17:04,071 - INFO - ==> PHÁT HIỆN 'Mongrana'. Đổi nhiệt độ từ 6.0°C -> 16°C
+2025-12-09 06:17:24,095 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham nuoc suoi
+2025-12-09 06:17:54,132 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 06:17:54,136 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 06:18:14,168 - INFO - [BRIDGE] Da cap nhat lai nhiet do khi khong con san pham Mongrana
+2025-12-09 06:18:19,770 - INFO - server closing
+2025-12-09 06:18:19,771 - INFO - server closed
+2025-12-09 06:18:19,775 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 06:18:19,780 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 06:18:19,785 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 06:18:19,796 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 06:18:19,796 - INFO - Tất cả các relay đã được tắt. Tạm biệt!
+2025-12-09 06:18:19,834 - INFO - Camera stopped
+2025-12-09 06:18:20,040 - INFO - Camera closed successfully.
+2025-12-09 06:21:01,979 - INFO - Initialization successful.
+2025-12-09 06:21:01,980 - INFO - Camera now open.
+2025-12-09 06:21:01,998 - INFO - Camera configuration has been adjusted!
+2025-12-09 06:21:02,013 - INFO - Configuration successful!
+2025-12-09 06:21:02,187 - INFO - Camera started
+2025-12-09 06:21:03,188 - INFO - Đang khởi động luồng AI Camera...
+2025-12-09 06:21:03,190 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN MAX6675: [Errno 2] No such file or directory. Vòng lặp điều khiển sẽ không hoạt động.
+2025-12-09 06:21:03,218 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN AHT20: No I2C device at address: 0x38. Dữ liệu độ ẩm sẽ không có sẵn.
+2025-12-09 06:21:03,219 - INFO - Đang khởi tạo cảm biến công suất ADS1115...
+2025-12-09 06:21:03,219 - ERROR - KHÔNG THỂ KHỞI TẠO CẢM BIẾN ADS1115: module 'board' has no attribute 'D28'. Dữ liệu công suất sẽ không có sẵn.
+2025-12-09 06:21:03,219 - INFO - KHỞI CHẠY HỆ THỐNG: Bật block (cục lạnh).
+2025-12-09 06:21:03,220 - INFO - Đang BẬT block (cục lạnh) trên chân: 268
+2025-12-09 06:21:03,225 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=1 thất bại
+2025-12-09 06:21:03,231 - INFO - server listening on 0.0.0.0:8765
+2025-12-09 06:21:03,232 - INFO - WebSocket server đang lắng nghe Go Service trên ws://0.0.0.0:8765
+2025-12-09 06:21:23,257 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 06:21:23,258 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 24.0°C -> 6°C
+2025-12-09 06:22:43,358 - INFO - [BRIDGE] Da lay du lieu tu camera: Mongrana
+2025-12-09 06:22:43,360 - INFO - ==> PHÁT HIỆN 'Mongrana'. Đổi nhiệt độ từ 6.0°C -> 16°C
+2025-12-09 06:26:03,232 - INFO - ==================================================
+2025-12-09 06:26:03,232 - INFO - BÁO CÁO NĂNG LƯỢNG TIÊU THỤ (TỔNG CỘNG)
+2025-12-09 06:26:03,232 - INFO - ==> 0.00 Wh
+2025-12-09 06:26:03,232 - INFO - ==> 0.0000 kWh
+2025-12-09 06:26:03,233 - INFO - ==================================================
+2025-12-09 06:26:43,656 - INFO - [BRIDGE] Da lay du lieu tu camera: nuoc suoi
+2025-12-09 06:26:43,658 - INFO - ==> PHÁT HIỆN 'nuoc suoi'. Đổi nhiệt độ từ 16.0°C -> 6°C
+2025-12-09 06:27:01,192 - INFO - Camera stopped
+2025-12-09 06:27:01,596 - INFO - Camera closed successfully.
+2025-12-09 06:27:08,646 - INFO - server closing
+2025-12-09 06:27:08,647 - INFO - server closed
+2025-12-09 06:27:08,649 - INFO - Đã nhận tín hiệu dừng (Ctrl+C).
+2025-12-09 06:27:08,650 - INFO - Đang thực hiện dọn dẹp trước khi thoát...
+2025-12-09 06:27:08,651 - INFO - Đang TẮT block (cục lạnh) trên chân: 268
+2025-12-09 06:27:08,657 - ERROR - [GPIO ERROR] Lệnh gpioset gpiochip1 268=0 thất bại
+2025-12-09 06:27:08,658 - INFO - Tất cả các relay đã được tắt. Tạm biệt!

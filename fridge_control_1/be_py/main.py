@@ -301,7 +301,21 @@ def load_product_data(filepath="/home/rpi/project/data/data.json"):
     except json.JSONDecodeError:
         logging.error(f"Lỗi định dạng file {filepath}")
         return []
-
+#def load_product_data(filepath=None):
+#    """Đọc dữ liệu từ file JSON"""
+#    # Nếu không truyền đường dẫn vào, tự động lấy đường dẫn chuẩn
+#    if filepath is None:
+#        filepath = os.path.join(project_root, "data", "data.json")
+#
+#    try:
+#        with open(filepath, 'r', encoding='utf-8') as f:
+#            return json.load(f)
+#    except FileNotFoundError:
+#        logging.error(f"Không tìm thấy file data tại: {filepath}")
+#        return {} # Trả về dict rỗng thay vì list rỗng để tránh lỗi key
+#    except json.JSONDecodeError:
+#        logging.error(f"Lỗi định dạng file JSON tại: {filepath}")
+#        return {}
 def update_temp_from_class_name(class_name):
     """
     Tra cứu trực tiếp bằng Key (tên object) trong data.json
